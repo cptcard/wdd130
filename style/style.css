@@ -1,9 +1,17 @@
+nav a {
+    color: rgb(11, 56, 155);
+    padding: 10px
+    display: block;
+}
 main {
     max-width: 840px;
 }
 main img {
     width:150px;
     height: auto;
+    border: 1px solid rgb(26, 26, 112);
+    padding: 2px;
+    box-shadow: 0 0 30px rgb(157, 157, 157)
 }
 p { padding: 0;}
 
