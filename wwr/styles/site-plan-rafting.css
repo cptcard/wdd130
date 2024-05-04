@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body {
+    font-family: var('Roboto');
+    max-width: 960px;
+    padding: 20px;
+}
+:root {
+    primary-color: #7A918D;
+    secondary-color: #2C363F;
+    accecnt-color: #BAB700;
+    accent2-color: #E77728;
+
+    heading-font: 'Oswald, serif';
+    paragraph-font: 'Roboto, serif';
+
+    nav-background-color: #BAB700;
+    nav-link-color: #2C363F;
+    nav-hover-link-color: #E77728 ;
+    nav-hover-background-color: #7A918D ;
+}
+body {
+    font-family: var(Roboto);
+    max-width: 960px;
+    padding: 20px;
+}
+h1, h2 ,h3 ,h4 ,h5 ,h6 {
+    font-family: var('Oswald');
+    color: var(#7A918D);
+}
+header {
+    padding: 20px;
+    background-color: var(#BAB700);
+}
+p {
+    padding:25px;
+}
+nav {
+    background-color: var(#BAB700);
+    font-size: 1.2rem;
+    display: flex;
+}
+ nav a {
+    display:block;
+    color: var(#2C363F);
+    text-decoration: none;
+    padding: 1rem;
+ }
+ nav a:link, nava:visited {
+    color: var(#2C363F)
+ }
+ nav a:hover {
+    color: var(#E77728);
+    background-color: var(#7A918D);
+ }
