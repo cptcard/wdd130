@@ -7,6 +7,10 @@
     --accent2-color: #E77728;
     --heading-font: 'Oswald', sans-serif;
     --paragraph-font: 'Roboto', sans-serif;
+    --nav-background-color: #C4F7A1 ;
+    --nav-link-color: #7A918D ;
+    --nav-hover-link-color: #BAB700;
+    --nav-hover-background-color:#E77728;
 }
 
 body {
@@ -30,23 +34,23 @@ p {
 }
 
 nav {
-    background-color: var(--accent1-color);
+    background-color: var(--nav-background-color);
     font-size: 1.2rem;
     display: flex;
 }
 
 nav a {
     display: block;
-    color: var(--secondary-color);
+    color: var(--nav-link-color);
     text-decoration: none;
     padding: 1rem;
 }
 
 nav a:link, nav a:visited {
-    color: var(--secondary-color);
+    color: var(--nav-link-color);
 }
 
 nav a:hover {
-    color: var(--accent2-color);
-    background-color: var(--primary-color);
+    color: var( --nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
 }
