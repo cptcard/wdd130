@@ -3,7 +3,7 @@
 :root {
     --primary-color: #7A918D;
     --secondary-color: #2C363F;
-    --accent-color: #BAB700;
+    --accent1-color: #BAB700;
     --accent2-color: #E77728;
     --heading-font: 'Oswald', sans-serif;
     --paragraph-font: 'Roboto', sans-serif;
@@ -30,7 +30,7 @@ p {
 }
 
 nav {
-    background-color: var(--accent-color);
+    background-color: var(--accent1-color);
     font-size: 1.2rem;
     display: flex;
 }
