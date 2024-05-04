@@ -37,7 +37,6 @@ nav {
 
 nav a {
     display: block;
-    color: var(--secondary-color);
     text-decoration: none;
     padding: 1rem;
 }
