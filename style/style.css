@@ -35,6 +35,7 @@ aside {
     background-color: #eee;
     color: #333;
     text-align: center;
+    position: relative;
 }
 
 aside img {
@@ -43,9 +44,9 @@ aside img {
 }
 
 aside h2 {
-    /* position:absolute; */ /* Removed this line */
-    /* top: 40px; */ /* Removed this line */
-    /* left: 150px; */ /* Removed this line */
+    position:absolute; 
+    top: 40px;
+    left: 140px;
 }
 
 footer {
