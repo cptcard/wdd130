@@ -74,7 +74,7 @@ header, footer {
 }
 
 nav {
-    background-color: white;
+    background-color: darkblue;
     padding: 1rem;
     display: flex;
     justify-content: space-evenly;
