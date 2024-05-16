@@ -51,7 +51,7 @@ aside img {
 aside h2 {
     position: absolute;
     top: 40px;
-    left: 140px;
+    left: 10px; /* Adjust left position for h2 */
 }
 
 footer {
@@ -76,7 +76,7 @@ header, footer {
 }
 
 nav {
-    background-color: gray;
+    background-color: darkblue;
     padding: 1rem;
     display: flex;
     justify-content: space-evenly;
@@ -94,6 +94,7 @@ nav a {
 h1 {
     border-bottom: 2px solid #000;
     padding-bottom: 0.5rem;
+    grid-column: 2; /* Set h1 to second column */
 }
 
 /* Added styles */
@@ -112,11 +113,4 @@ header, footer, .grid {
 main {
     grid-column: 2/3; /* Set main content to second column */
     margin: 1rem;
-}
-
-aside {
-    width: 100%;
-    position: relative;
-    grid-column: 1/2; /* Set aside to first column */
-    grid-row: 1/2;
 }
