@@ -1,15 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
 :root {
     --primary-color: #2C363F; 
     --secondary-color: #BAB700; 
-    --text-color: #2C363F; 
+    --text-color: #0f7208; 
     --background-color: #FFFFFF; 
     --header-footer-text-color: #FFFFFF;
     --hero-overlay-bg: rgba(255, 255, 255, 0.7);
     --social-link-size: 30px;
     --header-img-height: 90px; /* Increased by 20px */
     --hero-img-height-increase: 70px; /* Increased by 70px */
+    --box-border-color: #2C363F; /* Color for the box borders */
 }
 
 body {
@@ -20,6 +19,7 @@ body {
     padding: 0;
 }
 
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -40,21 +40,48 @@ header h1 {
     width: 100%;
 }
 
-header nav {
-    display: flex;
-    justify-content: flex-end;
+/* Navigation */
+nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for the 4 links */
+    gap: 10px; /* Adjust the gap between grid items */
+    justify-items: center; /* Center items horizontally */
+    flex-grow: 1;
 }
 
-header nav a {
-    color: var(--header-footer-text-color);
+nav a {
+    color: var(--text-color);
     text-decoration: none;
-    margin-right: 20px;
+    padding: 10px 20px; /* Padding for the links */
+    background-color: var(--hero-overlay-bg); /* Background color for links */
+    border-radius: 5px; /* Rounded corners for the links */
+    text-align: center; /* Center text inside the links */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
+nav a:hover {
+    background-color: var(--primary-color); /* Darker background color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    nav {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+    }
+}
+
+@media (max-width: 400px) {
+    nav {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+    }
+}
+
+/* Main Content */
 main {
     padding: 20px;
 }
 
+/* Hero Section */
 .hero {
     position: relative;
 }
@@ -66,20 +93,54 @@ main {
     max-height: calc(100vh + var(--hero-img-height-increase)); /* Increased height */
 }
 
+.hero-box {
+    border: 5px solid var(--box-border-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    background-color: var(--hero-overlay-bg);
+    display: flex; /* Enable flexbox for positioning */
+    align-items: center; /* Align items vertically */
+    margin-bottom: 20px;
+}
+.hero-box header {
+    margin-bottom: 20px; /* Add space between header and article */
+}
+
 .hero article {
     background-color: var(--hero-overlay-bg);
     padding: 10px;
     text-align: center;
     position: relative;
+    flex-grow: 1; /* Allow the article to take remaining space */
+    margin-right: 20px; /* Add space between article and image */
 }
+
 
 .hero article img {
-    float: right;
     width: 150px;
-    margin-left: 10px;
+    margin-left: auto; /* Push the image to the right */
 }
 
+
+
+
+
 /* History Section */
+
+
+.flex-container {
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+.flex-container p {
+    flex: 1; /* Distribute remaining space equally */
+}
+
+.flex-container img {
+    margin: 0 10px; /* Add some space between paragraphs and image */
+}
+
 .history {
     padding: 20px;
     text-align: center;
@@ -88,7 +149,7 @@ main {
 .history img {
     display: block;
     margin: 20px auto;
-    width: 50%;
+    width: 20%;
 }
 
 .history p {
@@ -97,6 +158,32 @@ main {
     text-align: justify;
     vertical-align: top;
 }
+.hero-box {
+    /* Your existing styles for the hero box */
+    border: 5px solid var(--box-border-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    background-color: var(--hero-overlay-bg);
+    display: flex; /* Enable flexbox for positioning */
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Center content horizontally */
+    flex-direction: column; /* Stack content vertically */
+}
+
+.hero-box h2 {
+    font-size: 24px; /* Adjust the font size of the heading */
+}
+
+.hero-box p {
+    text-align: center; /* Center align the paragraphs */
+    margin-top: 10px; /* Add margin between paragraphs */
+}
+
+.hero-box img {
+    margin-top: 10px; /* Add margin above the image */
+    max-width: 100%; /* Ensure the image doesn't exceed container width */
+}
+
 
 /* Adventures Section */
 .adventures {
@@ -108,11 +195,22 @@ main {
 }
 
 .adventures img {
-    width: calc(20% - 10px); /* Ensures five images in a row with gaps */
-    height: auto;
+    width: calc(100% / 5); /* Divide container width by 5 */
+    max-width: 20%; /* Ensure each image takes up 20% of the container width */
+    height: auto; /* Maintain aspect ratio */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    padding: 5px; /* Optional: Add some spacing between images */
 }
 
-/* Other Sections */
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .adventures img {
+        width: calc(100% / 2); /* Adjust for smaller screens */
+        max-width: 50%;
+    }
+}
+
+/* Footer */
 footer {
     background-color: var(--primary-color);
     color: var(--header-footer-text-color);
@@ -129,7 +227,7 @@ footer p {
 
 .sociallinks {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end left;
 }
 
 .sociallinks a {
