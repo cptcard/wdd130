@@ -348,15 +348,15 @@ footer p {
 }
 
 .contact-form label {
-    margin-top: 10px;f
+    margin-top: 10px;
 }
 
 .contact-form input[type="text"], 
 .contact-form input[type="email"], 
 .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid var(--box-border-color);
-    border-radius: 5px;
+    width: 100%; /* Use ":" instead of ";" to assign values */
+    padding: 10px; /* Use ":" instead of ";" to assign values */
+    margin-top: 5px; /* Use ":" instead of ";" to assign values */
+    border: 1px solid var(--box-border-color); /* Use ":" instead of ";" to assign values */
+    border-radius: 5px; /* Use ":" instead of ";" to assign values */
 }
