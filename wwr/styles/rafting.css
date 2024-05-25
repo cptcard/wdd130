@@ -1,3 +1,4 @@
+/* Root Variables */
 :root {
     --primary-color: #2C363F; 
     --secondary-color: #BAB700; 
@@ -11,6 +12,7 @@
     --box-border-color: #2C363F; /* Color for the box borders */
 }
 
+/* General Body Styles */
 body {
     font-family: 'Roboto', sans-serif; 
     color: var(--text-color);
@@ -19,7 +21,7 @@ body {
     padding: 0;
 }
 
-/* Header */
+/* Header Styles */
 header {
     display: flex;
     justify-content: space-between;
@@ -29,10 +31,12 @@ header {
     padding: 20px;
 }
 
+/* Logo Styles */
 header img {
     height: var(--header-img-height); /* Updated height */
 }
 
+/* Main Heading Styles */
 header h1 {
     text-align: center;
     color: var(--header-footer-text-color);
@@ -40,7 +44,7 @@ header h1 {
     width: 100%;
 }
 
-/* Navigation */
+/* Navigation Styles */
 nav {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 columns for the 4 links */
@@ -63,7 +67,7 @@ nav a:hover {
     background-color: var(--primary-color); /* Darker background color on hover */
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for navigation */
 @media (max-width: 600px) {
     nav {
         grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
@@ -76,12 +80,12 @@ nav a:hover {
     }
 }
 
-/* Main Content */
+/* Main Content Styles */
 main {
     padding: 20px;
 }
 
-/* Hero Section */
+/* Hero Section Styles */
 .hero {
     position: relative;
 }
@@ -93,6 +97,7 @@ main {
     max-height: calc(100vh + var(--hero-img-height-increase)); /* Increased height */
 }
 
+/* Hero Box Styles */
 .hero-box {
     border: 5px solid var(--box-border-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -102,6 +107,7 @@ main {
     align-items: center; /* Align items vertically */
     margin-bottom: 20px;
 }
+
 .hero-box header {
     margin-bottom: 20px; /* Add space between header and article */
 }
@@ -120,7 +126,7 @@ main {
     margin-left: auto; /* Push the image to the right */
 }
 
-/* History Section */
+/* History Section Styles */
 .flex-container {
     display: flex;
     align-items: center; /* Center items vertically */
@@ -152,142 +158,7 @@ main {
     vertical-align: top;
 }
 
-.hero-box {
-    /* Your existing styles for the hero box */
-    border: 5px solid var(--box-border-color);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    background-color: var(--hero-overlay-bg);
-    display: flex; /* Enable flexbox for positioning */
-    align-items: center; /* Align items vertically */
-    justify-content: center; /* Center content horizontally */
-    flex-direction: column; /* Stack content vertically */
-}
-
-.hero-box h2 {
-    font-size: 24px; /* Adjust the font size of the heading */
-}
-
-.hero-box p {
-    text-align: center; /* Center align the paragraphs */
-    margin-top: 10px; /* Add margin between paragraphs */
-}
-
-.hero-box img {
-    margin-top: 10px; /* Add margin above the image */
-    max-width: 100%; /* Ensure the image doesn't exceed container width */
-}
-
-/* Adventures Section */
-.adventures {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 40px;
-    flex-wrap: wrap; /* Ensures images wrap if space is insufficient */
-}
-
-.adventures img {
-    width: calc(100% / 5); /* Divide container width by 5 */
-    max-width: 20%; /* Ensure each image takes up 20% of the container width */
-    height: auto; /* Maintain aspect ratio */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
-    padding: 5px; /* Optional: Add some spacing between images */
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-    .adventures img {
-        width: calc(100% / 2); /* Adjust for smaller screens */
-        max-width: 50%;
-    }
-}
-
-/* Footer */
-footer {
-    background-color: var(--primary-color);
-    color: var(--header-footer-text-color);
-    text-align: center;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-footer p {
-    margin: 0;
-}
-
-.sociallinks {
-    display: flex;
-    justify-content: flex-end, left;
-}
-
-.sociallinks a {
-    text-decoration: none;
-}
-
-.sociallinks img {
-    width: var(--social-link-size);
-    margin: 0 5px;
-}
-
-/* Responsive Design */
-@media (max-width: 800px) {
-    .adventures img {
-        width: calc(33.33% - 10px); /* Three images per row on medium screens */
-    }
-}
-
-@media (max-width: 600px) {
-    .hero h1 {
-        font-size: 1.5rem;
-    }
-    
-    .hero article {
-        background-color: var(--background-color);
-        padding: 10px;
-        margin-top: 10px;
-    }
-    
-    .hero article img {
-        width: 100px;
-        margin: 0 0 10px 0;
-        float: none;
-        display: block;
-    }
-    
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    header img {
-        justify-self: center;
-        grid-column: auto;
-    }
-
-    header nav {
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    header nav a {
-        margin: 10px 0;
-    }
-
-    .history p {
-        display: block;
-        width: 100%;
-    }
-
-    .adventures img {
-        width: calc(50% - 10px); /* Two images per row on small screens */
-    }
-}
-
-/* Contact Us Page Styles */
-/* Contact Us Page Styles */
+/* Contact Info Section Styles */
 .contact-info {
     padding: 20px;
     background-color: var(--hero-overlay-bg);
@@ -301,6 +172,7 @@ footer p {
     text-align: center;
 }
 
+/* Map Container Styles */
 .map-container {
     margin-top: 10px;
     text-align: center;
@@ -312,6 +184,7 @@ footer p {
     border: 0;
 }
 
+/* Team Section Styles */
 .team {
     padding: 20px;
     text-align: center;
@@ -335,6 +208,7 @@ footer p {
     color: var(--primary-color);
 }
 
+/* Contact Form Section Styles */
 .contact-form {
     padding: 20px;
     background-color: var(--hero-overlay-bg);
@@ -354,9 +228,38 @@ footer p {
 .contact-form input[type="text"], 
 .contact-form input[type="email"], 
 .contact-form textarea {
-    width: 100%; /* Use ":" instead of ";" to assign values */
-    padding: 10px; /* Use ":" instead of ";" to assign values */
-    margin-top: 5px; /* Use ":" instead of ";" to assign values */
-    border: 1px solid var(--box-border-color); /* Use ":" instead of ";" to assign values */
-    border-radius: 5px; /* Use ":" instead of ";" to assign values */
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--box-border-color);
+    border-radius: 5px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Adventures Section Styles */
+.adventures {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 40px;
+    flex-wrap: wrap; /* Ensures images wrap if space is insufficient */
+}
+
+.adventures img {
+    width: calc(100% / 5); /* Divide container width by 5 */
+    max-width: 20%;
 }
