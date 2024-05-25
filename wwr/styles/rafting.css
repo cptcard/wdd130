@@ -220,7 +220,7 @@ footer p {
 
 .sociallinks {
     display: flex;
-    justify-content: flex-end left;
+    justify-content: flex-end, left;
 }
 
 .sociallinks a {
@@ -348,7 +348,7 @@ footer p {
 }
 
 .contact-form label {
-    margin-top: 10px;
+    margin-top: 10px;f
 }
 
 .contact-form input[type="text"], 
