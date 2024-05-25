@@ -115,19 +115,12 @@ main {
     margin-right: 20px; /* Add space between article and image */
 }
 
-
 .hero article img {
     width: 150px;
     margin-left: auto; /* Push the image to the right */
 }
 
-
-
-
-
 /* History Section */
-
-
 .flex-container {
     display: flex;
     align-items: center; /* Center items vertically */
@@ -158,6 +151,7 @@ main {
     text-align: justify;
     vertical-align: top;
 }
+
 .hero-box {
     /* Your existing styles for the hero box */
     border: 5px solid var(--box-border-color);
@@ -183,7 +177,6 @@ main {
     margin-top: 10px; /* Add margin above the image */
     max-width: 100%; /* Ensure the image doesn't exceed container width */
 }
-
 
 /* Adventures Section */
 .adventures {
@@ -292,3 +285,77 @@ footer p {
         width: calc(50% - 10px); /* Two images per row on small screens */
     }
 }
+
+/* Contact Us Page Styles */
+/* Contact Us Page Styles */
+.contact-info {
+    padding: 20px;
+    background-color: var(--hero-overlay-bg);
+    border: 1px solid var(--box-border-color);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.contact-info h2, .team h2, .contact-form h2 {
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.map-container {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+.team {
+    padding: 20px;
+    text-align: center;
+}
+
+.team .employee {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
+.team .employee img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+}
+
+.team .employee p {
+    margin-top: 10px;
+    color: var(--primary-color);
+}
+
+.contact-form {
+    padding: 20px;
+    background-color: var(--hero-overlay-bg);
+    border: 1px solid var(--box-border-color);
+    border-radius: 5px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-top: 10px;
+}
+
+.contact-form input[type="text"], 
+.contact-form input[type="email"], 
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--box-border-color);
+    border-radius: 5px;
