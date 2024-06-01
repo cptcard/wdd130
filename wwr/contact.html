@@ -5,11 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>White Water Rafting</title>
     <link rel="stylesheet" href="styles/contactsrafting.css">
+    <style>
+        /* Add this inline style or put it in your external CSS file */
+        .contact-info,
+        .contact-form {
+            text-align: center;
+        }
+
+        .contact-info p,
+        .contact-form form {
+            display: inline-block;
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
     <header>
         <img src="images/circlelogo.jpeg" alt="White Water Rafting Logo">
-        <h1>White Water Rafting Adventures</h1>
+        <h1>Moars Oars Rafting Co | Contact Us</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="trips.html">Trips</a>
@@ -26,48 +39,94 @@
             </div>
         </section>
 
-        <section class="newsletter-signup">
-            <h2>Sign Up for Our Newsletter</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
-                <button type="submit">Sign Up</button>
-            </form>
-        </section>
+        <div class="content-wrapper">
+            <section class="newsletter-signup">
+                <h2>Sign Up for Our Newsletter</h2>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                    <button type="submit">Sign Up</button>
+                </form>
+            </section>
 
-        <section class="call-to-action">
-            <h2>Ready for an Adventure?</h2>
-            <a href="trips.html" class="cta-button">Check Out Our Trips</a>
-        </section>
+            <section class="call-to-action">
+                <h2>Ready for an Adventure?</h2>
+                <a href="trips.html" class="cta-button">Check Out Our Trips</a>
+            </section>
 
-        <section class="employee-section">
-            <div class="employee">
-                <h3>John Doe</h3>
-                <img src="images/john.jpg" alt="John Doe">
-            </div>
-            <div class="employee">
-                <h3>Jane Smith</h3>
-                <img src="images/jane.jpg" alt="Jane Smith">
-            </div>
-            <div class="employee">
-                <h3>Mike Johnson</h3>
-                <img src="images/" alt="Mike Johnson">
-            </div>
-        </section>
+            <section class="employee-section">
+                <div class="employee">
+                    <h3>John Doe</h3>
+                    <img src="images/john.jpg" alt="John Doe">
+                </div>
+                <div class="employee">
+                    <h3>Jane Smith</h3>
+                    <img src="images/jane.jpg" alt="Jane Smith">
+                </div>
+                <div class="employee">
+                    <h3>Mike Johnson</h3>
+                    <img src="images/mike.jpg" alt="Mike Johnson">
+                </div>
+            </section>
 
-        <section class="map-section">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2982.7135013360683!2d-111.7878589845791!3d43.82601463705465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x535430958ad2d183%3A0x5e80f14b44a4680!2sRexburg%2C%20ID%2083470%2C%20USA!5e0!3m2!1sen!2s!4v1622528589375!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </section>
-    </main>
-
-    <footer>
-        <div class="sociallinks">
-            <a href="#"><img src="images/facebooklogo.webp" alt="Facebook"></a>
-            <a href="#"><img src="images/twitter.webp" alt="Twitter"></a>
-            <a href="#"><img src="images/Instalogo.webp" alt="Instagram"></a>
+            <section class="contact-section">
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <p>Address: Rexburg, Idaho</p>
+                    <p>Phone: 123-456-7890</p>
+                    <p>Email: contact@whitewaterrafting.com</p>
+                </div>
+                <div class="contact-form">
+                    <h2>Get In Touch</h2>
+                    <form action="submit_form.php" method="POST">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required><br><br>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required><br><br>
+                        
+                        <label for="purpose">Purpose:</label><br>
+                        <div class="purpose-options">
+                            <div class="option">
+                                <input type="radio" id="general" name="purpose" value="General Inquiry" required>
+                                <label for="general">General Inquiry</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="reservation" name="purpose" value="Reservation Question">
+                                <label for="reservation">Reservation Question</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="suggestion" name="purpose" value="Website Suggestion">
+                                <label for="suggestion">Website Suggestion</label>
+                            </div>
+                        </div><br>
+                        
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+                        
+                        <input type="checkbox" id="newsletter" name="newsletter" value="Subscribe">
+                        <label for="newsletter">Please subscribe me to the monthly newsletter</label><br><br>
+                        
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </section>
         </div>
+    </main>
+        <footer>
+            <nav class="sociallinks">
+                <a href="https://facebook.com">
+                    <img src="images/facebooklogo.webp" alt="Facebook">
+                </a>
+                <a href="https://twitter.com">
+                    <img src="images/twitter.webp" alt="Twitter">
+                </a>
+                <a href="https://instagram.com">
+                    <img src="images/Instalogo.webp" alt="Instagram">
+                </a>
+            </nav>
         <p>&copy; 2023 White Water Rafting Adventures</p>
         <a href="wireframe.png">View Wireframe</a>
     </footer>

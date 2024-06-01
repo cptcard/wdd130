@@ -20,7 +20,7 @@
     box-sizing: border-box;
 }
 
-/* Body Styles */
+
 body {
     font-family: 'Roboto', sans-serif;
     color: var(--text-color);
@@ -28,6 +28,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 
 /* Header Styles */
 header {
@@ -37,7 +38,6 @@ header {
     background-color: var(--primary-color);
     color: var(--header-footer-text-color);
     padding: 20px;
-    border-bottom: 2px solid var(--secondary-color); /* Added border */
 }
 
 header img {
@@ -51,16 +51,12 @@ header h1 {
     width: 100%;
 }
 
-/* Navigation Styles */
 nav {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     justify-items: center;
     flex-grow: 1;
-    background-color: gray;
-    padding: 1rem;
-    border-top: 2px solid var(--secondary-color); /* Added border */
 }
 
 nav a {
@@ -117,6 +113,9 @@ main {
     padding: 1rem;
     border-radius: 5px;
 }
+.content-wrapper h2 {
+    padding: 20px 0;
+}
 
 /* Newsletter Signup Styles */
 .newsletter-signup {
@@ -154,9 +153,7 @@ main {
     text-align: center;
     padding: 2rem;
 }
-h2 {
-    margin-bottom: 20px; /* Adjust this value to increase or decrease the space */
-}
+
 
 .call-to-action .cta-button {
     padding: 1rem 2rem;
@@ -211,14 +208,62 @@ h2 {
     border-radius: 50%;
     border: 2px solid var(--primary-color);
 }
+/* Add this to your CSS file */
+.purpose-options {
+    display: flex;
+    justify-content: center;
+}
 
+.option {
+    margin-right: 20px;
+}
+
+.option input[type="radio"] {
+    display: none;
+}
+
+.option label {
+    display: block;
+    border: 2px solid #ccc;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.option label:hover {
+    background-color: #f0f0f0;
+}
+
+.option input[type="radio"]:checked + label {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+
+.grid-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.grid-item {
+    background: #f9f9f9;
+    padding: 1rem;
+    text-align: center;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
 /* Footer Styles */
 footer {
     background: var(--primary-color);
     color: var(--header-footer-text-color);
     text-align: center;
     padding: 1rem;
-    border-top: 2px solid var(--secondary-color); /* Added border */
 }
 
 footer .sociallinks {
@@ -231,9 +276,4 @@ footer .sociallinks a {
 
 footer img {
     height: var(--social-link-size);
-}
-
-/* Footer Links Styling */
-footer a {
-    color: var(--box-border-color);
 }
