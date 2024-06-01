@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>White Water Rafting</title>
+    <meta name="description" content="This site provides information about Moars Oars Rafting Co. and its employees and location.">
+    <meta name="author" content="Grant Nettles">
     <link rel="stylesheet" href="styles/contactsrafting.css">
     <style>
         /* Add this inline style or put it in your external CSS file */
@@ -81,26 +83,30 @@
                 <div class="contact-form">
                     <h2>Get In Touch</h2>
                     <form action="submit_form.php" method="POST">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required><br><br>
+                        <label for="name-input">Name:</label>
+                        <input type="text" id="name-input" name="name" required><br><br>
                         
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required><br><br>
+                        <label for="email-input">Email:</label>
+                        <input type="email" id="email-input" name="email" required><br><br>
                         
                         <label for="purpose">Purpose:</label><br>
                         <div class="purpose-options">
                             <div class="option">
-                                <input type="radio" id="general" name="purpose" value="General Inquiry" required>
-                                <label for="general">General Inquiry</label>
+                                <input type="radio" id="general-purpose" name="purpose" value="General Inquiry" required>
+                                <label for="general-purpose">General Inquiry</label>
                             </div>
                             <div class="option">
-                                <input type="radio" id="reservation" name="purpose" value="Reservation Question">
-                                <label for="reservation">Reservation Question</label>
+                                <input type="radio" id="reservation-purpose" name="purpose" value="Reservation Question">
+                                <label for="reservation-purpose">Reservation Question</label>
                             </div>
                             <div class="option">
-                                <input type="radio" id="suggestion" name="purpose" value="Website Suggestion">
-                                <label for="suggestion">Website Suggestion</label>
+                                <input type="radio" id="suggestion-purpose" name="purpose" value="Website Suggestion">
+                                <label for="suggestion-purpose">Website Suggestion</label>
                             </div>
+                        </div>
+                    </form>
+                </div>
+                
                         </div><br>
                         
                         <label for="message">Message:</label><br>
