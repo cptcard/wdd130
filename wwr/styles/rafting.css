@@ -1,27 +1,24 @@
-/* Root Variables */
 :root {
-    --primary-color: #2C363F; 
-    --secondary-color: #BAB700; 
-    --text-color: #0f7208; 
-    --background-color: #FFFFFF; 
+    --primary-color: #2C363F;
+    --secondary-color: #BAB700;
+    --text-color: #0f7208;
+    --background-color: #FFFFFF;
     --header-footer-text-color: #FFFFFF;
-    --hero-overlay-bg: rgba(255, 255, 255, 0.7);
+    --hero-overlay-bg: rgba(167, 167, 167, 0.7);
     --social-link-size: 30px;
     --header-img-height: 90px; /* Increased by 20px */
     --hero-img-height-increase: 70px; /* Increased by 70px */
     --box-border-color: #2C363F; /* Color for the box borders */
 }
 
-/* General Body Styles */
 body {
-    font-family: 'Roboto', sans-serif; 
+    font-family: 'Roboto', sans-serif;
     color: var(--text-color);
     background-color: var(--background-color);
     margin: 0;
     padding: 0;
 }
 
-/* Header Styles */
 header {
     display: flex;
     justify-content: space-between;
@@ -31,12 +28,10 @@ header {
     padding: 20px;
 }
 
-/* Logo Styles */
 header img {
-    height: var(--header-img-height); /* Updated height */
+    height: var(--header-img-height);
 }
 
-/* Main Heading Styles */
 header h1 {
     text-align: center;
     color: var(--header-footer-text-color);
@@ -44,48 +39,44 @@ header h1 {
     width: 100%;
 }
 
-/* Navigation Styles */
 nav {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns for the 4 links */
-    gap: 10px; /* Adjust the gap between grid items */
-    justify-items: center; /* Center items horizontally */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-items: center;
     flex-grow: 1;
 }
 
 nav a {
-    color: var(--text-color);
+    color: var(--header-footer-text-color);
     text-decoration: none;
-    padding: 10px 20px; /* Padding for the links */
-    background-color: var(--hero-overlay-bg); /* Background color for links */
-    border-radius: 5px; /* Rounded corners for the links */
-    text-align: center; /* Center text inside the links */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    padding: 10px 20px;
+    background-color: var(--hero-overlay-bg);
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
 }
 
 nav a:hover {
-    background-color: var(--primary-color); /* Darker background color on hover */
+    background-color: var(--secondary-color);
 }
 
-/* Responsive adjustments for navigation */
 @media (max-width: 600px) {
     nav {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 400px) {
     nav {
-        grid-template-columns: 1fr; /* 1 column on very small screens */
+        grid-template-columns: 1fr;
     }
 }
 
-/* Main Content Styles */
 main {
     padding: 20px;
 }
 
-/* Hero Section Styles */
 .hero {
     position: relative;
 }
@@ -94,172 +85,98 @@ main {
     display: block;
     width: 100%;
     height: auto;
-    max-height: calc(100vh + var(--hero-img-height-increase)); /* Increased height */
+    max-height: calc(100vh + var(--hero-img-height-increase));
 }
 
-/* Hero Box Styles */
-.hero-box {
-    border: 5px solid var(--box-border-color);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    background-color: var(--hero-overlay-bg);
-    display: flex; /* Enable flexbox for positioning */
-    align-items: center; /* Align items vertically */
-    margin-bottom: 20px;
-}
-
-.hero-box header {
-    margin-bottom: 20px; /* Add space between header and article */
-}
-
-.hero article {
-    background-color: var(--hero-overlay-bg);
-    padding: 10px;
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--header-footer-text-color);
     text-align: center;
-    position: relative;
-    flex-grow: 1; /* Allow the article to take remaining space */
-    margin-right: 20px; /* Add space between article and image */
-}
-
-.hero article img {
-    width: 150px;
-    margin-left: auto; /* Push the image to the right */
-}
-
-/* History Section Styles */
-.flex-container {
-    display: flex;
-    align-items: center; /* Center items vertically */
-}
-
-.flex-container p {
-    flex: 1; /* Distribute remaining space equally */
-}
-
-.flex-container img {
-    margin: 0 10px; /* Add some space between paragraphs and image */
-}
-
-.history {
-    padding: 20px;
-    text-align: center;
-}
-
-.history img {
-    display: block;
-    margin: 20px auto;
-    width: 20%;
-}
-
-.history p {
-    display: inline-block;
-    width: 45%;
-    text-align: justify;
-    vertical-align: top;
-}
-
-/* Contact Info Section Styles */
-.contact-info {
-    padding: 20px;
-    background-color: var(--hero-overlay-bg);
-    border: 1px solid var(--box-border-color);
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
-.contact-info h2, .team h2, .contact-form h2 {
-    color: var(--primary-color);
-    text-align: center;
-}
-
-/* Map Container Styles */
-.map-container {
-    margin-top: 10px;
-    text-align: center;
-}
-
-.map-container iframe {
-    width: 100%;
-    height: 450px;
-    border: 0;
-}
-
-/* Team Section Styles */
-.team {
-    padding: 20px;
-    text-align: center;
-}
-
-.team .employee {
-    display: inline-block;
-    margin: 10px;
-    text-align: center;
-}
-
-.team .employee img {
-    width: 150px;
-    height: auto;
-    border-radius: 50%;
-    border: 3px solid var(--primary-color);
-}
-
-.team .employee p {
-    margin-top: 10px;
-    color: var(--primary-color);
-}
-
-/* Contact Form Section Styles */
-.contact-form {
-    padding: 20px;
-    background-color: var(--hero-overlay-bg);
-    border: 1px solid var(--box-border-color);
+    background: var(--hero-overlay-bg);
+    padding: 1rem;
     border-radius: 5px;
 }
 
-.contact-form form {
+.newsletter-signup {
+    background: #f2f2f2;
+    padding: 2rem;
+    text-align: center;
+}
+
+.newsletter-signup form {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.contact-form label {
-    margin-top: 10px;
+.newsletter-signup label {
+    margin: 0.5rem 0;
 }
 
-.contact-form input[type="text"], 
-.contact-form input[type="email"], 
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid var(--box-border-color);
-    border-radius: 5px;
+.newsletter-signup input {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    width: 80%;
 }
 
-.contact-form button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--primary-color);
+.newsletter-signup button {
+    padding: 0.5rem 1rem;
+    background: var(--primary-color);
     color: white;
+    border: none;
     cursor: pointer;
 }
 
-.contact-form button:hover {
-    background-color: var(--secondary-color);
+.call-to-action {
+    text-align: center;
+    padding: 2rem;
 }
 
-/* Adventures Section Styles */
-.adventures {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 40px;
-    flex-wrap: wrap; /* Ensures images wrap if space is insufficient */
+.call-to-action .cta-button {
+    padding: 1rem 2rem;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
-.adventures img {
-    width: calc(100% / 5); /* Divide container width by 5 */
-    max-width: 20%;
+.grid-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.grid-item {
+    background: #f9f9f9;
+    padding: 1rem;
+    text-align: center;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+footer {
+    background: var(--primary-color);
+    color: var(--header-footer-text-color);
+    text-align: center;
+    padding: 1rem;
+}
+
+footer .sociallinks {
+    margin: 1rem 0;
+}
+
+footer .sociallinks a {
+    margin: 0 0.5rem;
+}
+
+footer img {
+    height: var(--social-link-size);
 }

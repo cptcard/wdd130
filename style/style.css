@@ -1,21 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --primary-color: #2C363F;
+    --secondary-color: #BAB700;
+    --text-color: #0f7208;
+    --background-color: #FFFFFF;
+    --header-footer-text-color: #FFFFFF;
+    --hero-overlay-bg: rgba(167, 167, 167, 0.7);
+    --social-link-size: 30px;
+    --header-img-height: 90px;
+    --hero-img-height-increase: 70px;
+    --box-border-color: #2C363F;
+}
+
+/* Reset and box-sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    max-width: 960px;
+    padding: 20px;
+    margin: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+    color: var(--primary-color);
+}
+
+header, footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--header-footer-text-color);
+    padding: 20px;
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+header img, footer img {
+    height: var(--header-img-height);
+}
+
+header h1, footer h1 {
+    text-align: center;
+    color: var(--header-footer-text-color);
+    margin: 10px 0;
+    width: 100%;
+}
+
+nav {
+    background-color: gray;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 nav a {
-    color: rgb(11, 56, 155);
+    color: var(--header-footer-text-color);
     padding: 10px;
     display: inline-block;
-    text-decoration: none; /* Added */
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
 }
 
 main {
     max-width: 840px;
-    margin: 0 auto; /* Combined with header and footer */
+    margin: 0 auto;
     padding: 0 1rem;
-    grid-column: 2; /* Set main content to second column */
+    grid-column: 2;
 }
 
 main img {
@@ -40,7 +108,7 @@ aside {
     color: #333;
     text-align: center;
     position: relative;
-    grid-column: 1; /* Set aside to first column */
+    grid-column: 1;
 }
 
 aside img {
@@ -49,17 +117,28 @@ aside img {
 }
 
 aside h2 {
-    position: relative; /* Change position to relative */
-    margin-top: 0; /* Reset margin */
+    position: relative;
+    margin-top: 0;
 }
 
 footer {
     margin-top: 150px;
     border-top: 1px solid #000;
     text-align: center;
+    max-width: 840px;
+    padding: 20px;
 }
 
-/* Class Selectors */
+footer a {
+    color: var(--header-footer-text-color); /* Ensures footer links are white */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--secondary-color); /* Changes link color on hover for effect */
+}
+
 .box {
     margin: 1rem;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -68,48 +147,118 @@ footer {
     color: #312509;
 }
 
-header, footer {
-    max-width: 840px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-nav {
-    background-color: gray;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-nav a {
-    display: block;
-    padding: 0.5rem;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: dar;
-}
-
-h1 {
-    border-bottom: 2px solid #000;
-    padding-bottom: 0.5rem;
-    grid-column: 2; /* Set h1 to second column */
-}
-
-/* Added styles */
-header, footer, .grid {
-    margin: 0 auto;
-    max-width: 840px;
-}
-
 .grid {
     display: grid;
-    grid-template-columns: 1fr 3fr; /* 1/4 width for aside, 3/4 width for main */
+    grid-template-columns: 1fr 3fr;
     gap: 1rem;
     align-items: start;
+    max-width: 840px;
+    margin: 0 auto;
 }
 
 main {
-    grid-column: 2/3; /* Set main content to second column */
+    grid-column: 2/3;
     margin: 1rem;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: calc(100vh + var(--hero-img-height-increase));
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--header-footer-text-color);
+    text-align: center;
+    background: var(--hero-overlay-bg);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.newsletter-signup {
+    background: #f2f2f2;
+    padding: 2rem;
+    text-align: center;
+}
+
+.newsletter-signup form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter-signup label {
+    margin: 0.5rem 0;
+}
+
+.newsletter-signup input {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    width: 80%;
+}
+
+.newsletter-signup button {
+    padding: 0.5rem 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.call-to-action {
+    text-align: center;
+    padding: 2rem;
+}
+
+.call-to-action .cta-button {
+    padding: 1rem 2rem;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.call-to-action .cta-button:hover {
+    background-color: var(--secondary-color);
+}
+
+.grid-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.grid-item {
+    background: #f9f9f9;
+    padding: 1rem;
+    text-align: center;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+footer .sociallinks {
+    margin: 1rem 0;
+}
+
+footer .sociallinks a {
+    margin: 0 0.5rem;
+}
+
+footer img {
+    height: var(--social-link-size);
 }
