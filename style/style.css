@@ -108,15 +108,17 @@ aside {
 }
 
 aside img {
-    width: 200px;
-    height: auto;
+    float: left; /* Float the image to the left */
+    margin-right: 1em; /* Add some margin to create space between the image and the text */
+    width: 200px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
 }
-
 
 aside h2 {
-    position: relative;
+    text-align: left;
     margin-top: 0;
 }
+
 
 footer {
     margin-top: 150px;
