@@ -15,7 +15,11 @@
 .box {
     color:gray:
 }
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 /* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
