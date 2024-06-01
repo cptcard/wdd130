@@ -1,0 +1,218 @@
+:root {
+    --primary-color: #2C363F;
+    --secondary-color: #BAB700;
+    --text-color: #0f7208;
+    --background-color: #FFFFFF;
+    --header-footer-text-color: #FFFFFF;
+    --hero-overlay-bg: rgba(167, 167, 167, 0.7);
+    --social-link-size: 30px;
+    --header-img-height: 90px; /* Increased by 20px */
+    --hero-img-height-increase: 70px; /* Increased by 70px */
+    --box-border-color: #2C363F; /* Color for the box borders */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--header-footer-text-color);
+    padding: 20px;
+}
+
+header img {
+    height: var(--header-img-height);
+}
+
+header h1 {
+    text-align: center;
+    color: var(--header-footer-text-color);
+    margin: 10px 0;
+    width: 100%;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-items: center;
+    flex-grow: 1;
+}
+
+nav a {
+    color: var(--header-footer-text-color);
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: var(--hero-overlay-bg);
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+}
+
+@media (max-width: 600px) {
+    nav {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    nav {
+        grid-template-columns: 1fr;
+    }
+}
+
+main {
+    padding: 20px;
+}
+
+.hero {
+    position: relative;
+}
+
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: calc(100vh + var(--hero-img-height-increase));
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--header-footer-text-color);
+    text-align: center;
+    background: var(--hero-overlay-bg);
+    padding: 1rem;
+    border-radius: 5px;
+}
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.flex-container p {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.flex-container img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto; /* Center the image */
+}
+
+
+.newsletter-signup {
+    background: #f2f2f2;
+    padding: 2rem;
+    text-align: center;
+}
+
+.newsletter-signup form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter-signup label {
+    margin: 0.5rem 0;
+}
+
+.newsletter-signup input {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    width: 80%;
+}
+
+.newsletter-signup button {
+    padding: 0.5rem 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.call-to-action {
+    text-align: center;
+    padding: 2rem;
+}
+
+.call-to-action .cta-button {
+    padding: 1rem 2rem;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.grid-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.grid-item {
+    background: #f9f9f9;
+    padding: 1rem;
+    text-align: center;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.image-container {
+    display: flex;
+    justify-content: space-between; /* Adjust alignment as needed */
+    flex-wrap: nowrap; /* Prevent wrapping to keep all images in the same row */
+    overflow-x: auto; /* Enable horizontal scrolling if necessary */
+}
+
+.image-container img {
+    width: 20%; /* Set the width to 20% to fit five images in a row */
+    max-width: 100%; /* Ensure images don't exceed container width */
+    height: auto; /* Allow images to resize proportionally */
+    max-height: 200px; /* Set a maximum height to prevent excessive stretching */
+}
+
+
+
+
+footer {
+    background: var(--primary-color);
+    color: var(--header-footer-text-color);
+    text-align: center;
+    padding: 1rem;
+}
+
+footer .sociallinks {
+    margin: 1rem 0;
+}
+
+footer .sociallinks a {
+    margin: 0 0.5rem;
+}
+
+footer img {
+    height: var(--social-link-size);
+}
+

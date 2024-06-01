@@ -1,98 +1,75 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Contact Us | Moars Oars Rafting Co</title>
-    <h1>Contact Us | Moars Oars Rafting Co</h1>
-    <meta name="author" content="Grant Nettles">
-    <meta name="description" content="Get in touch with Moars Oars Rafting Co. Find our contact information, employee profiles, and a contact form here.">
-    <link rel="stylesheet" href="styles/rafting.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Water Rafting</title>
+    <link rel="stylesheet" href="styles/contactsrafting.css">
 </head>
 <body>
     <header>
-        <img src="images/circlelogo.jpeg" alt="Logo">
+        <img src="images/circlelogo.jpeg" alt="White Water Rafting Logo">
+        <h1>White Water Rafting Adventures</h1>
         <nav>
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
             <a href="trips.html">Trips</a>
+            <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
-    <main>
-        <section class="contact-info">
-            <h2>Contact Information</h2>
-            <p>Address: 123 River Road, Raft City, RC 12345</p>
-            <p>Phone: (123) 456-7890</p>
-            <p>Email: info@moarsoars.com</p>
-        </section>
-        <section class="map-container">
-            <h2>Location</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0191823687394!2d-122.40135018468143!3d37.791110819651236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858158b5d66d9d%3A0x4a6c20fdeb4e2021!2sGoogle!5e0!3m2!1sen!2sus&zoom=17" width="600" height="450" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-        </section>        
-        <section class="team">
-            <h2>Our Team</h2>
-            <div class="employee">
-                <img src="images/employee1.jpg" alt="Employee 1">
-                <p>John Doe - CEO</p>
-            </div>
-            <div class="employee">
-                <img src="images/employee2.jpg" alt="Employee 2">
-                <p>Jane Smith - Guide</p>
-            </div>
-            <div class="employee">
-                <img src="images/employee3.jpg" alt="Employee 3">
-                <p>Sam Wilson - Customer Service</p>
-            </div>
-        </section>
-        <section class="contact-form">
-            <h2>Contact Us</h2>
-            <form action="#" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="purpose">Purpose of Message:</label>
-                <div>
-                    <input type="radio" id="general" name="purpose" value="General Inquiry" required>
-                    <label for="general">General Inquiry</label>
-                </div>
-                <div>
-                    <input type="radio" id="reservation" name="purpose" value="Reservation Question">
-                    <label for="reservation">Reservation Question</label>
-                </div>
-                <div>
-                    <input type="radio" id="website" name="purpose" value="Website Suggestion">
-                    <label for="website">Website Suggestion</label>
-                </div>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                
-                <div>
-                    <input type="checkbox" id="subscribe" name="subscribe">
-                    <label for="subscribe">Please subscribe me to the monthly newsletter</label>
-                </div>
-                
-                <button type="submit">Send Message</button>
+    <main>
+        <section class="hero">
+            <img src="images/raftingban.jpeg" alt="Rafting Adventure">
+            <div class="hero-text">
+                <h2>Experience the Thrill of White Water Rafting</h2>
+            </div>
+        </section>
+
+        <section class="newsletter-signup">
+            <h2>Sign Up for Our Newsletter</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <button type="submit">Sign Up</button>
             </form>
         </section>
+
+        <section class="call-to-action">
+            <h2>Ready for an Adventure?</h2>
+            <a href="trips.html" class="cta-button">Check Out Our Trips</a>
+        </section>
+
+        <section class="employee-section">
+            <div class="employee">
+                <h3>John Doe</h3>
+                <img src="images/john.jpg" alt="John Doe">
+            </div>
+            <div class="employee">
+                <h3>Jane Smith</h3>
+                <img src="images/jane.jpg" alt="Jane Smith">
+            </div>
+            <div class="employee">
+                <h3>Mike Johnson</h3>
+                <img src="images/" alt="Mike Johnson">
+            </div>
+        </section>
+
+        <section class="map-section">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2982.7135013360683!2d-111.7878589845791!3d43.82601463705465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x535430958ad2d183%3A0x5e80f14b44a4680!2sRexburg%2C%20ID%2083470%2C%20USA!5e0!3m2!1sen!2s!4v1622528589375!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
     </main>
+
     <footer>
-        <nav class="sociallinks">
-            <a href="https://facebook.com">
-                <img src="images/facebooklogo.webp" alt="Facebook">
-            </a>
-            <a href="https://twitter.com">
-                <img src="images/twitter.webp" alt="Twitter">
-            </a>
-            <a href="https://instagram.com">
-                <img src="images/Instalogo.webp" alt="Instagram">
-            </a>
-        </nav>
-        <p>2024 Moars Oars Rafting Co. Created by Grant Nettles</p>
+        <div class="sociallinks">
+            <a href="#"><img src="images/facebooklogo.webp" alt="Facebook"></a>
+            <a href="#"><img src="images/twitter.webp" alt="Twitter"></a>
+            <a href="#"><img src="images/Instalogo.webp" alt="Instagram"></a>
+        </div>
+        <p>&copy; 2023 White Water Rafting Adventures</p>
+        <a href="wireframe.png">View Wireframe</a>
     </footer>
 </body>
 </html>
