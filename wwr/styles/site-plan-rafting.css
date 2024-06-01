@@ -66,6 +66,12 @@ nav a {
     text-align: center;
     transition: background-color 0.3s;
 }
+nav a :visited {
+    color:#2C363F;
+}
+nav a :link {
+    color:#0f7208;
+}
 
 nav a:hover {
     background-color: var(--secondary-color);
